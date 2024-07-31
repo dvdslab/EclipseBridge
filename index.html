@@ -11,29 +11,43 @@
 
 </head>
 <body>
-    <div class="form-container">
-        <h1>UNOFFICIAL ETHEREUM MAINNET - ECLIPSE BRIDGE by hkey</h1>
-        <form>
-          <div>
-                <input style="width: 300px;" type="text" id="sender-eth-addr" placeholder="Metamask not connected." disabled>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="brand-logo">Eclipse Community</a>
+            <ul class="nav-menu">
+                <input style="width: 100px; border-radius: 50px; margin: 0; padding: 10px; font-size: 12px;" type="text" id="sender-eth-addr" placeholder="Metamask not connected." disabled>
                 <button style="float: right;" id="connect-button">CONNECT</button>
-            </div>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div class="form-container">
+            <h1>UNOFFICIAL ETHEREUM MAINNET - ECLIPSE BRIDGE</h1>
+            <h1>by hkey and dæv</h1>
+            <form>
+                <p>Eclipse Address:</p>
+                <input type="text" id="eclipse-wallet" placeholder="Please enter your eclipse wallet address.">
+                <div id="amount">
+                    <p>Amount</p>
+                    <p>Balance: <span id="balance">0</span></p>
+                </div>
+                <div id="ether-input-group">
+                    <input style="width: 80%;" type="number" id="ether-amount" step="0.1" value="0.002" placeholder="Amount in ether">
+                    <p style="font-weight: bold; font-size: 15px;">ETH</p>
+                </div>
+                <p>
+                    <li>Make sure you select the correct chain before sending the transaction (Ethereum Mainnet).</li>
+                    <li>Eclipse is currently in the Developer Mainnet phase, during this phase you will not be able to withdraw your ethers.</li>
+                </p>
+                    
+                <button disabled type="button" id="bridge-button" >BRIDGE</button>
 
-            <input type="number" id="ether-amount" step="0.1" value="0.002" placeholder="Amount in ether">
-            <input type="text" id="eclipse-wallet" placeholder="Your eclipse wallet address.">
-	    <input disabled value="Your will see your Eclipse balance here." id="balance">
-	    <p>
-		<li>Make sure you select the correct chain before sending the transaction (Ethereum Mainnet).</li>
-		<li>Eclipse is currently in the Developer Mainnet phase, during this phase you will not be able to withdraw your ethers.</li>
-	    </p>
+                <h5 class="dev-credit">TWITTER: <a href="https://x.com/hkeydesign">hkeydesign</a> & <a href="https://x.com/hiassea">dæv</a></h5>
+                <h5 class="dev-credit">Github Repo: <a href="https://github.com/hkey0/EclipseBridge">hkey0/EclipseBridge</a></h5>
+            </form>
             
-	    <button disabled type="button" id="bridge-button" >BRIDGE</button>
-
-            <h6 class="dev-credit">TWITTER: <a href="https://x.com/hkeydesign">hkeydesign</a></h6>
-            <h6 class="dev-credit">Github Repo: <a href="https://github.com/hkey0/EclipseBridge">hkey0/EclipseBridge</a></h6>
-        </form>
-        
-    </div>
+        </div>
+    </section>
 </body>
 </html>
 

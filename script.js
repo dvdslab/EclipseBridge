@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
         web3 = new Web3(window.ethereum);
         connectBtn.innerText = 'Logout';
 
-        walletArea.value = (await web3.eth.getAccounts())[0]
+        const address = (await web3.eth.getAccounts())[0];
+        walletArea.value = `${address.slice(0, 6)}...${address.slice(-4)}`;
     }
 
     testi();
